@@ -18,6 +18,8 @@ public class UIHandler : Singleton<UIHandler>
     GameObject scoreSection;
     [SerializeField]
     TextMeshProUGUI scoreGnomes, scoreBombs, score;
+    [SerializeField]
+    TextMeshProUGUI fGnomes, fBombs, fDestructable, fTime;
 
     private void Start()
     {
@@ -83,9 +85,29 @@ public class UIHandler : Singleton<UIHandler>
     public void ShowFinalScore(int gnomesCollected, int gnomesMax, int bombsLeft, int scoreFinal)
     {
         scoreSection.SetActive(true);
+        int[] final = Score.Instance.FinalScoring;
+
+
+        GetFinalScroing( ref fGnomes, final[0] );
+        GetFinalScroing( ref fBombs, final[1] );
+        GetFinalScroing( ref fDestructable, final[2] );
+        GetFinalScroing( ref fTime, final[3] );
+
+
         scoreGnomes.text = gnomesCollected + " / " + gnomesMax + " Gnomes saved";
         scoreBombs.text = bombsLeft + " bombs left";
         score.text = scoreFinal.ToString();
+    }
+
+    private void GetFinalScroing( ref TextMeshProUGUI text, int score )
+    {
+        text.text = score.ToString();
+
+        if ( score < 0)
+        {
+            text.color = Color.red;
+        }
+        
     }
 
     public void ReturnToMenue()

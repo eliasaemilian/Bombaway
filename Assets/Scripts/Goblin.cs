@@ -25,6 +25,7 @@ public class Goblin : MonoBehaviour, IExplodingElement, IClickable
             Instantiate(destroyedGoblin, transform.position, Quaternion.identity);
 
         Score.Instance.Remove( BombsAndGoblinsTracker.Instance.ScorePerGoblinDestroyed );
+        Score.Instance.CalcGoblinScore( BombsAndGoblinsTracker.Instance.ScorePerGoblinDestroyed * -1 );
 
         Destroy( gameObject);
     }

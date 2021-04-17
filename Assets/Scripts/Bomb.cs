@@ -93,6 +93,7 @@ public class Bomb : MonoBehaviour, IExplodingElement, IPickupable
         Destroy(gameObject);
 
         Score.Instance.Add(scorePerExplosion);
+        Score.Instance.CalcBombScore(scorePerExplosion);
 
         BombsAndGoblinsTracker.Instance.RemoveBomb();
     }

@@ -21,6 +21,7 @@ public class Destructable : MonoBehaviour, IExplodingElement
         }
 
         Score.Instance.Add(scorePerExplode);
+        Score.Instance.CalcDestructableScore(scorePerExplode);
         Destroy(gameObject);
     }
 }

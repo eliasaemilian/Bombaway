@@ -11,6 +11,14 @@ public class Score : Singleton<Score>
     float timer;
     public int Amount { get => (int)( currentScore / 10 ) * 10; }
 
+    private int goblinScore;
+    private int bombScore;
+    private int destructableScore;
+    private int timedScore;
+
+    public int[] FinalScoring { get => new int[4] { goblinScore, bombScore, destructableScore, timedScore }; }
+
+
     void Start()
     {
         timer = 60;
@@ -37,6 +45,7 @@ public class Score : Singleton<Score>
     {
         stopped = true;
         Score.Instance.Add( CalculateFinalTimedScore() );
+        timedScore = CalculateFinalTimedScore();
     }
 
     private int CalculateFinalTimedScore()
@@ -45,4 +54,16 @@ public class Score : Singleton<Score>
         return Mathf.Max( 0, score );
     }
 
+    public void CalcGoblinScore(int amount)
+    {
+        goblinScore += amount;
+    }
+    public void CalcDestructableScore( int amount )
+    {
+        destructableScore += amount;
+    }
+    public void CalcBombScore( int amount )
+    {
+        bombScore += amount;
+    }
 }
