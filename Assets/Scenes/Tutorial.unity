@@ -9486,6 +9486,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5454148747328122040, guid: 3ce2b7ceb306fd34995ab893491fd37b,
+        type: 3}
+      propertyPath: scorePerGoblinCollected
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454148747328122040, guid: 3ce2b7ceb306fd34995ab893491fd37b,
+        type: 3}
+      propertyPath: scorePerGoblinDestroyed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5454148747328122041, guid: 3ce2b7ceb306fd34995ab893491fd37b,
         type: 3}
       propertyPath: m_RootOrder

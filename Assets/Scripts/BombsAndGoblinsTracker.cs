@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class BombsAndGoblinsTracker : Singleton<BombsAndGoblinsTracker>
 {
-    [SerializeField] int scorePerGoblin;
+    [SerializeField] int scorePerGoblinCollected;
+    [SerializeField] int scorePerGoblinDestroyed;
+    public int ScorePerGoblinDestroyed { get { return scorePerGoblinDestroyed; } }
+
 
     int goblinsCollected;
     int totalGoblins;
@@ -34,7 +37,7 @@ public class BombsAndGoblinsTracker : Singleton<BombsAndGoblinsTracker>
         }
 
         Instance.goblinsCollected++;
-        Score.Instance.Add(Instance.scorePerGoblin);
+        Score.Instance.Add(Instance.scorePerGoblinCollected);
 
         GoblinAdded?.Invoke();
 
@@ -44,6 +47,7 @@ public class BombsAndGoblinsTracker : Singleton<BombsAndGoblinsTracker>
         }
 
     }
+
 
     public void RemoveBomb()
     {

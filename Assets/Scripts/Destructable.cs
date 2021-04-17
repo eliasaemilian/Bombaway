@@ -10,6 +10,7 @@ public class Destructable : MonoBehaviour, IExplodingElement
 
     [SerializeField] int scorePerExplode;
 
+
     public void Explode(Bomb source)
     {
         Debug.Log(name + " destroyed by explosion");

@@ -24,7 +24,9 @@ public class Goblin : MonoBehaviour, IExplodingElement, IClickable
         if (destroyedGoblin != null)
             Instantiate(destroyedGoblin, transform.position, Quaternion.identity);
 
-        Destroy(gameObject);
+        Score.Instance.Remove( BombsAndGoblinsTracker.Instance.ScorePerGoblinDestroyed );
+
+        Destroy( gameObject);
     }
 
     public void Click()
