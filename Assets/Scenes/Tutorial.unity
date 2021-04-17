@@ -5027,7 +5027,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1923231399, guid: 4cd17d75cd65e6a478946f637619d23c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4cd17d75cd65e6a478946f637619d23c, type: 3}
 --- !u!1001 &1259240587
 PrefabInstance:
@@ -7983,7 +7984,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1923231399, guid: 4cd17d75cd65e6a478946f637619d23c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4cd17d75cd65e6a478946f637619d23c, type: 3}
 --- !u!1 &1914992683
 GameObject:
@@ -9084,7 +9086,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1923231399, guid: 4cd17d75cd65e6a478946f637619d23c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4cd17d75cd65e6a478946f637619d23c, type: 3}
 --- !u!1001 &2102862204
 PrefabInstance:

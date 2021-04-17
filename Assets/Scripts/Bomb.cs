@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.Experimental.Rendering.Universal;
+using System.Linq;
 
 public class Bomb : MonoBehaviour, IExplodingElement, IPickupable
 {
@@ -71,6 +72,7 @@ public class Bomb : MonoBehaviour, IExplodingElement, IPickupable
         exploded = true;
 
         var effectables = GameObject.FindGameObjectsWithTag("Effectable");
+
 
         foreach (var ef in effectables)
         {
